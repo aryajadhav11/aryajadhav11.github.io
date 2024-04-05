@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Madimi+One&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dosis:wght@200..800&family=Madimi+One&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dosis:wght@200..800&family=Madimi+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+*{
+    margin:0;
+    border: border-box;
+}
+
+.navbar {
+    height: 60px;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    display: flex;
+}
+
+.nav-logo {
+    height: 40px;
+    font-size: 35px;
+    margin-top: 8px;
+    margin-left: 20px;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.border {
+    border: 1.5px solid transparent;
+}
+
+.border:hover {
+    border:1.5px solid white;
+}
+
+.slide{
+    height:100%;
+    width: 180px;
+    position: absolute;
+    background-color: rgba(94, 94, 94, 0.527);
+    transition: 0.5s ease;
+    transform: translatex(-180px);
+}
+
+.slide h1{
+    color:rgb(245, 164, 66);  
+    font-weight: 300;
+    margin-top: 4px;
+    text-align: center;
+    padding: 10px 0;
+    padding-right: 35px;
+    padding-left: 45px;
+    pointer-events: none;
+}
+
+
+
+.slide ul{
+    padding: 10px;
+}
+
+.slide ul li{
+    list-style: none;
+    color: rgba(151, 148, 132, 0.842);
+    font-size: 22px;
+    padding: 15px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: flex;
+    transition: 0.2s ease-out;
+    font-family: "Dosis", sans-serif;
+}
+
+.slide ul li:hover{
+    color:rgb(238, 238, 238);
+    background-color: rgba(218, 210, 196, 0.171); 
+    border-radius: 1rem;
+}
+
+.slide li a{
+    text-decoration: none;
+    color: orange;
+}
+
+.slide li a:hover{
+    color: white;;
+}
+
+.slide i{
+    padding: 4.5px;
+    left: 20px;
+}
+
+input{
+    display: none;
+    visibility: hidden;
+}
+
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 75px;
+    left: 15px;
+    z-index: 1;
+    background-color: rgba(245, 245, 245, 0.589);
+    cursor: pointer;
+    border-radius: 2.5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: rgba(119, 30, 30, 0.562);
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.toggle .top_line{
+    top: 30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line{
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom_line{
+    top: 70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+input:checked ~ .slide{
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+body{
+    background-color: rgb(3, 3, 3);
+}
+
+.hello{
+    font-size: 130px;
+    font-family: "Alex Brush", cursive;
+    color: orange;
+}
+
+.name{
+    margin-top: -30px; 
+    margin-bottom: 10px;
+    font-size: 70px;
+    font-family: "Roboto Condensed", sans-serif;
+    color: orange;
+}
+
+.info{
+    margin-right: 1300px;
+    font-size: 27px;
+    color: orange;
+}
+
+button{
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    padding: 20px;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+button:hover{
+    color:rgb(255, 255, 255);
+    background-color: rgb(16, 109, 23); 
+}
+
+.image{
+    margin-top: -600px; 
+    margin-left: 1400px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.main{
+    margin-left: 370px;
+    margin-top: 250px;
+}
+
+.contact{
+    margin-left: 600px;
+    margin-top: 170px;
+    margin-right: -400px;
+    padding: 20px;
+    height: 500px;
+    width: 1000px;
+    align-items: center;
+}
+
+.contactinfo h1{
+    color: rgb(206, 127, 23);
+    font-size: 65px;
+    padding-left: 250px ;
+    padding-bottom: 50px;
+}
+
+.contactinfo ul li{
+    font-size: 40px;
+    list-style: none;
+    color: rgba(206, 164, 27, 0.89);
+    padding: 15px 15px;
+}
+
+.contactinfo i{
+    padding: 9px;
+    color: rgba(206, 164, 27, 0.89);
+}
+
+.linkedin{
+    margin-top: -150px;
+    margin-left: 290px;
+    list-style: none;
+    font-size: 38px;
+    color: rgba(177, 157, 46, 0.712);
+}
+
+.linkedin a{
+    text-decoration: none;
+}
+
+.contact-border{
+    color:  rgba(87, 87, 84, 0.589);
+    border: 5px solid ;
+    height: 500px;
+    width: 1000px;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5)
+}
+
+.boxmain{
+    margin-left: 500px;
+    margin-top: 170px;
+    margin-right: -400px;
+    padding: 20px;
+    height: 700px;
+    width: 1300px;
+    background-color: rgb(46, 46, 45);
+    align-items: center;
+    border-radius: 3rem;
+}
+
+.box2{
+    margin-left: 500px;
+    font-size: 70px;
+    padding: 10px;
+    color: orange;
+}
+
+.box3{
+    margin-left: 100px;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.skills ul{
+    font-size: 28px;
+    color: rgb(211, 211, 211);
+    padding: 5px;
+    margin-left: 100px;
+    margin-right: 150px;
+    margin-top: 10px;
+}
+ .work h1{
+    color: orange;
+    font-size: 60px;
+    margin-top: 250px;
+    margin-left: 450px;
+ }
+
+ .work ul{
+    color: rgb(231, 228, 223);
+    font-size: 40px;
+    margin-left: 500px;
+    margin-top: 20px;
+ }
+
+ .work i{
+    padding: 10px;
+    margin-right: 10px;
+ }
+
+ .ques h1{
+    color: orange;
+    font-size: 60px;
+    margin-top: -310px;
+    margin-left: 1300px;
+ }
+
+ .ques ul{
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-left: 1270px;
+    cursor: pointer;
+ }
+
+ .ques ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: antiquewhite;
+    font-size: 40px;
+ }
+
+ .gform ul{
+    margin-top: 50px;
+    margin-left: 650px;
+    text-decoration: none;
+    list-style: none;
+ }
